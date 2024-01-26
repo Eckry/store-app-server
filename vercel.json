@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builids": [
+    {
+      "src": "server.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "des": "server.js"
+    }
+  ]
+}
