@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builids": [
+  "builds": [
     {
       "src": "server.js",
       "use": "@now/node"
