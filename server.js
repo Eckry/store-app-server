@@ -1,10 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const {Preference} = require("mercadopago");
-const {MercadoPagoConfig} = require("mercadopago");
+const { Preference } = require("mercadopago");
+const { MercadoPagoConfig } = require("mercadopago");
 
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
-const API_KEY = process.env.API_KEY
+const API_KEY = process.env.API_KEY;
 
 const client = new MercadoPagoConfig({
   accessToken: ACCESS_TOKEN,
@@ -29,9 +29,9 @@ app.post("/api/create-preference", (req, res) => {
           },
         ],
         back_urls: {
-          success: "https://eckry.github.io/store-app/",
-          failure: "https://eckry.github.io/store-app/",
-          pending: "https://eckry.github.io/store-app/",
+          success: "https://store-app-pink.vercel.app/",
+          failure: "https://store-app-pink.vercel.app/",
+          pending: "https://store-app-pink.vercel.app/",
         },
         auto_return: "approved",
         payer: {
