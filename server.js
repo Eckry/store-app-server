@@ -13,7 +13,11 @@ const client = new MercadoPagoConfig({
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://store-app-pink.vercel.app",
+  })
+);
 
 app.post("/api/create-preference", (req, res) => {
   const preference = new Preference(client);
